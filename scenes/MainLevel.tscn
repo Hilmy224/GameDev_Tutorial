@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/PlatformBlue.gd" id="3"]
-[ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="4"]
+[ext_resource type="Script" path="res://scenes/NewLoseArea.gd" id="4"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(138.75, 79)
@@ -15,12 +15,14 @@ position = Vector2(35, 565)
 script = ExtResource("3")
 
 [node name="StonePlatform" parent="PlatformBlue" instance=ExtResource("1")]
+disable_mode = 2
 
 [node name="StonePlatform2" parent="PlatformBlue" instance=ExtResource("1")]
 position = Vector2(70, 0)
+disable_mode = 2
 
 [node name="BlueShip" parent="." instance=ExtResource("2")]
-position = Vector2(72.7009, 421.901)
+position = Vector2(100, 421.901)
 lock_rotation = true
 
 [node name="ObjectiveArea" type="Area2D" parent="."]
