@@ -17,9 +17,9 @@ Sprite2D Node is used to diplay a 2D texture. If pressed its inspector we can se
 Both Rigid And Static Body are a derived from PhysicsBody Node having diffrent purposes. Where RigidBody Node is used if maybe you want simulate physics on those object and StaticBody Node is  used when you know that it always will be static for example maybe a wall or a ground.
 
 3. Ubah nilai atribut Mass pada tipe RigidBody2D secara bebas di scene BlueShip, lalu coba jalankan scene MainLevel. Apa yang terjadi?<br>
-Nothing Apparent happens
+Nothing Apparent happens. This probably due to how physics works. Mass has little influence the physics of the object in this case if Weight or Gravity isnt changed.
 4. Ubah nilai atribut Disabled pada tipe CollisionShape2D di scene StonePlatform, lalu coba jalankan scene MainLevel. Apa yang terjadi?<br>
-Nothing Apparent Happens
+BlueShip does not collide with StonePlatform making it fall/go through it.
 5. Pada scene MainLevel, coba manipulasi atribut Position, Rotation, dan Scale milik node BlueShip secara bebas. Apa yang terjadi pada visualisasi BlueShip di Viewport?<br>
 Nothing Apparent Happens probably because changing values to the rigidbody is overidden by the physics engine when its running. There is a warning that tells you if you want to change it would better to change the children collison shape instead.
 
